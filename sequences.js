@@ -228,8 +228,10 @@ function updateBreadcrumbs(nodeArray, percentageString) {
     // Set position for entering and updating nodes.
       g.attr("transform", function(d, i) {
 
-        if (i * (b.w + b.s) > 600) {
-            return "translate(" + i * (b.w + b.s) + ", 40)";
+        if (i * (b.w + b.s) > 1200) {
+            return "translate(" + i * (b.w + b.s) - 1200 + ", 80)";
+        } else if (i * (b.w + b.s) > 600) {
+            return "translate(" + i * (b.w + b.s) - 600 + ", 40)";
         } else {
             return "translate(" + i * (b.w + b.s) + ", 0)";
         }
