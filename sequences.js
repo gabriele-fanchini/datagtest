@@ -181,7 +181,7 @@ function initializeBreadcrumbTrail() {
     // Add the svg area.
     var trail = d3.select("#sequence").append("svg:svg")
         .attr("width", width)
-        .attr("height", 50)
+        .attr("height", 140)
         .attr("id", "trail");
     // Add the label at the end, for the percentage.
     trail.append("svg:text")
