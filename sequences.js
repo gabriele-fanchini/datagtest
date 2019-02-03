@@ -226,20 +226,15 @@ function updateBreadcrumbs(nodeArray, percentageString) {
         .text(function (d) { return d.name; });
 
     // Set position for entering and updating nodes.
+      g.attr("transform", function(d, i) {
 
-    if (i * (b.w + b.s) > 600) {
-        g.attr("transform", function (d, i) {
+        if (i * (b.w + b.s) > 600) {
             return "translate(" + i * (b.w + b.s) + ", 40)";
-        });
-    } else {
-        g.attr("transform", function (d, i) {
+        } else {
             return "translate(" + i * (b.w + b.s) + ", 0)";
-        });
-    }
-
-    //   g.attr("transform", function(d, i) {
-    //     return "translate(" + i * (b.w + b.s) + ", 0)";
-    //   });
+        }
+        // return "translate(" + i * (b.w + b.s) + ", 0)";
+      });
 
     // Remove exiting nodes.
     g.exit().remove();
