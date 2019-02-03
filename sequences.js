@@ -229,9 +229,11 @@ function updateBreadcrumbs(nodeArray, percentageString) {
       g.attr("transform", function(d, i) {
 
         if (i * (b.w + b.s) > 1200) {
-            return "translate(" + parseInt(i * (b.w + b.s)) - 1200 + ", 80)";
+            return "translate(" + (i * (b.w + b.s)) - 1200 + ", 80)";
         } else if (i * (b.w + b.s) > 600) {
-            return "translate(" + parseInt(i * (b.w + b.s)) - 600 + ", 40)";
+            console.log((i * (b.w + b.s)));
+            console.log((i * (b.w + b.s)) - 600);
+            return "translate(" + (i * (b.w + b.s)) - 600 + ", 40)";
         } else {
             return "translate(" + i * (b.w + b.s) + ", 0)";
         }
